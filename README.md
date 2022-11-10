@@ -60,7 +60,7 @@ The general structure of the inception module is as follows:
 (Generalized based Data Subset Selection For Efficient and Robust Learning)
 
 <img width="823" alt="Screen Shot 2022-11-09 at 2 20 06 PM" src="https://user-images.githubusercontent.com/115956066/200933561-4c97a7fb-83e0-4801-b1d3-8ae6a979f863.png">
-<sub>Source: Compilation based on Krishnateja *et al.* (2020)</sub>
+<sub>Source: Compilation based on Krishnateja et al.(2020)</sub>
 
 ## How to Reproduce the Results
 Both models, ResNet18 and GoogLeNet, have Jupyter notebooks with the different types of strategy data selection (CRAIG, GLISTER, and Entire Dataset). To reproduce the results, just follow and run each section on the Jupyter notebook. 
