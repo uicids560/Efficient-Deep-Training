@@ -33,9 +33,19 @@ For CNN models, the following batch sizes were using. However, those batch size 
   - Test Batch Size: 1200.
 
 ### ResNet18
-Made up of residual blocks. “This is built on the concept of "skip-connections" and uses a lot of batch-normalization to let it train hundreds of layers successfully without sacrificing speed over time” (Shrivastav, A)
+This model is made up of residual blocks. ResNet “is built on the concept of "skip-connections" and uses a lot of batch-normalization to let it train hundreds of layers successfully without sacrificing speed over time” (Shrivastav, A)
+
+<img width="690" alt="Screen Shot 2022-11-10 at 7 38 15 AM" src="https://user-images.githubusercontent.com/115956066/201106694-0306b483-a8fe-4503-8723-b389203dadda.png">
+<sub>Source: Shrivastav, A</sub>
 
 ### GoogLeNet
+This architecture consists of 22-layer deep CNN and 9 inception modules, with one of the objectives to keep computational efficiency. However, one potential disadvantage of the model is that “large networks are prone to overfitting and suffer from exploding or vanishing gradient problem” (Alake R., 2020).
+
+The general structure of the inception module is as follows:
+<img width="731" alt="Screen Shot 2022-11-10 at 7 39 13 AM" src="https://user-images.githubusercontent.com/115956066/201106783-45a2447d-909e-4d11-8c6a-e47a4916b14e.png">
+
+<sub>Source: Shrivastav, A</sub>
+
 
 
 ## CoreSet Methods Used
@@ -44,11 +54,13 @@ Made up of residual blocks. “This is built on the concept of "skip-connections
 (Coresets for Accelerating Incremental Gradient descent)
 
 <img width="820" alt="Screen Shot 2022-11-09 at 2 20 50 PM" src="https://user-images.githubusercontent.com/115956066/200933716-7021ddf7-751d-4204-914d-606e6df09a60.png">
+<sub>Source: Compilation based on </sub>
 
 ### GLISTER 
 (Generalized based Data Subset Selection For Efficient and Robust Learning)
 
 <img width="823" alt="Screen Shot 2022-11-09 at 2 20 06 PM" src="https://user-images.githubusercontent.com/115956066/200933561-4c97a7fb-83e0-4801-b1d3-8ae6a979f863.png">
+<sub>Source: Compilation based on Krishnateja *et al.* (2020)</sub>
 
 ## How to Reproduce the Results
 Both models, ResNet18 and GoogLeNet, have Jupyter notebooks with the different types of strategy data selection (CRAIG, GLISTER, and Entire Dataset). To reproduce the results, just follow and run each section on the Jupyter notebook. 
@@ -63,6 +75,15 @@ The following hyper-parameters can be modified:
 | Fraction | Fraction of training data that are used for the training process | CoreSet Methods|
 | Convex | True: run the subset selection only once right before the start of the training. False: subset selection strategy that selects a new subset every epoch | CRAIG|
 | r | Taylor Approximation: number of times the validation loss function is re-computed.| GLISTER|
+|Select Every| Number of epoch interval for selection | GLISTER|
 
 Once the hyper-parameters are defined, the training process takes place and a result summary is shown at the end of the Jupyter notebook. 
+
+## References
+Alake, R (2020). *Deep Learning: GoogLeNet Explained.* Taken from the website: https://towardsdatascience.com/deep-learning-googlenet-explained-de8861c82765
+
+Krishnateja Killamsetty, Durga Sivasubramanian, Ganesh Ramakrishnan, Rishabh Iyer (2020). *GLISTER: Generalization based Data Subset Selection for Efficient and Robust Learning.* DOI: 10.48550/arxiv.2012.10630
+
+Shrivastav, A (n.d). *Different Types of CNN Models.* Taken from the website: https://iq.opengenus.org/different-types-of-cnn-models/ 
+
 
