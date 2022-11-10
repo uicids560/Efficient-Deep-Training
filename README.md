@@ -55,3 +55,14 @@ Both models, ResNet18 and GoogLeNet, have Jupyter notebooks with the different t
 
 The following hyper-parameters can be modified:
 
+| Hyper-Parameter| Description | Selection Strategy|
+| --- | --- | --- |
+| Epochs | Total number of iterations of all the training data in one cycle.| All|
+| Eta | Learning rate: step size for the one step gradient update. | All|
+| Num_classes | Number of target class in the dataset| All|
+| Fraction | Fraction of training data that are used for the training process | CoreSet Methods|
+| Convex | True: run the subset selection only once right before the start of the training. False: subset selection strategy that selects a new subset every epoch | CRAIG|
+| r | Taylor Approximation: number of times the validation loss function is re-computed.| GLISTER|
+
+Once the hyper-parameters are defined, the training process takes place and a result summary is shown at the end of the Jupyter notebook. 
+
