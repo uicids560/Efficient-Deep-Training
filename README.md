@@ -80,10 +80,11 @@ The following hyper-parameters can be modified:
 | Num_classes | Number of target class in the dataset| All|
 | Fraction | Fraction of training data that are used for the training process | CoreSet Methods|
 | Convex | True: run the subset selection only once right before the start of the training. False: subset selection strategy that selects a new subset every epoch | CRAIG|
-| r | Taylor Approximation: number of times the validation loss function is re-computed.| GLISTER|
-|Select Every| Number of epoch interval for selection | GLISTER|
+| r | Taylor Approximation: number of times the validation loss function is re-computed.| GLISTER, GRADMATCH|
+|Select Every| Number of epoch interval for selection | GLISTER, GRADMATCH|
+|Validation Flag| True: match the subset loss gradient with validation set loss gradient like in the case of class imbalance. False: training set loss gradient | GRADMATCH|
 
-Once the hyper-parameters are defined, the training process takes place and a result summary is shown at the end of the Jupyter notebook. 
+Sections that can be modified inside the code are: *Initiating CoreSet method subset selection dataloaders* and *Arguments for training and evaluation.* Once the hyper-parameters are defined, the training process takes place and a result summary is shown at the end of the Jupyter notebook. 
 
 ## Conclusions
 After testing three CoreSet Methods by comparing accuracy and time spent training the models with the full dataset, it was found that:
