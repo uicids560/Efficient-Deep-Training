@@ -9,6 +9,7 @@
 - [CoreSet Methods Used](#coreset-methods-used)
   - [CRAIG](#craig)
   - [GLISTER](#glister)
+  - [GRADMATCH](#gradmatch)
 - [How to Reproduce the Results](#how-to-reproduce-the-results)
 - [Conclusions](#conclusions)
 - [References](#references)
@@ -20,13 +21,18 @@ CCC Intelligent Solutions was founded in 1980 with the perspective of changing t
 Due to the fact that CCCIS’ key insights is to power critical operations at all stages of a claim with speed and accuracy, the main objective of this project is to identify and implement methods to have a relevant subset of data for modeling training. By selecting quality over quantity on the training dataset, it is expected to maintain or improve models’ performance. As a result, models will not take a lot of GPU power which translates into less time and money spent to train the models. 
 
 ## Models Implemented
-Two different Convolutional Neural Network (CNN) Models were implemented, to test the impact of a distinct number of layers on the accuracy and time spent for the CIFAR-10 dataset. 
+Two different Convolutional Neural Network (CNN) Models were implemented, to test the impact of a distinct number of layers on the accuracy and time spent for the CIFAR-10 and CIFAR-100 datasets. 
 
 CIFAR-10 dataset has the following characteristics:
 
   - Classes: 10 (plane, car, bird, cat, deer, dog, frog, horse, ship, truck).
   - Images: “Consists of 60.000 32x32 color images in 10 classes, with 6.000 images per class. There are 50.000 training images and 10.000 test images” (TensorFlow).
-  
+
+CIFAR-100 dataset has the following characteristics:
+
+  - Classes: 100 (beaver, dolphin, otter, seal, whale, fish, aquarium fish, … )
+  - Images: “Consists of 60.000 32x32 color images in 100 classes, with 600 images per class. There are 50.000 training images and 10.000 test images” (TensorFlow).
+
 For CNN models, the following batch sizes were used. However, those batch size can be modified if needed.
   - Training Batch Size: 20; 
   - Validation Batch Size: 20; 
