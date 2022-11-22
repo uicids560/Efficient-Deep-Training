@@ -10,6 +10,7 @@
   - [CRAIG](#craig)
   - [GLISTER](#glister)
   - [GRADMATCH](#gradmatch)
+  - [RANDOM](#random)
 - [How to Reproduce the Results](#how-to-reproduce-the-results)
 - [Conclusions](#conclusions)
 - [References](#references)
@@ -33,7 +34,7 @@ CIFAR-100 dataset has the following characteristics:
   - Classes: 100 (beaver, dolphin, otter, seal, whale, fish, aquarium fish, … )
   - Images: “Consists of 60.000 32x32 color images in 100 classes, with 600 images per class. There are 50.000 training images and 10.000 test images” (TensorFlow).
 
-For CNN models, the following batch sizes were used. However, those batch size can be modified if needed.
+In this case, ResNet18 and GoogLeNet models were implemented. For those CNN models, the following batch sizes were used. However, those batch size can be modified if needed.
   - Training Batch Size: 20; 
   - Validation Batch Size: 20; 
   - Test Batch Size: 1200.
@@ -74,8 +75,10 @@ The general structure of the inception module is as follows:
 
 <sub>Source: Compilation based on Krishnateja et al.(2021)</sub>
 
+### RANDOM 
+
 ## How to Reproduce the Results
-Both models, ResNet18 and GoogLeNet, have Jupyter notebooks with the different types of strategy data selection (CRAIG, GLISTER, and Entire Dataset). To reproduce the results, just follow and run each section on the Jupyter notebook. 
+Each folder contains Jupyter notebooks with the code implemented on both models, ResNet18 and GoogLeNet. Each model has 5 different types of strategy data selection (CRAIG, GLISTER, GradMatch, Random, and Entire Dataset). To reproduce the results, just follow and run each section on the Jupyter notebooks. Some hyper-parameters can be modified based on each algorithm and model structure. 
 
 The following hyper-parameters can be modified:
 
